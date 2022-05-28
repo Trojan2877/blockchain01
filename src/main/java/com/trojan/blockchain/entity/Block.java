@@ -1,10 +1,13 @@
 package com.trojan.blockchain.entity;
 
+import javax.validation.constraints.NotEmpty;
 
 public class Block {
 
+	@NotEmpty(message = "Block is empty!!")
 	private String block;
 	
+	@NotEmpty(message = "Next Block is empty!!")
 	private String nextBlock;
 
 	public String getBlock() {
