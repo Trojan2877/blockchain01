@@ -15,7 +15,6 @@ public class BlockChainController {
 
 	@PostMapping("/block/create")
 	public ResponseEntity<String> createBlock(@Valid @RequestBody Block block) {
-		
 		return new ResponseEntity<>("Current Block : "+block.getBlock()+" -> Next Block : " + block.getNextBlock(), HttpStatus.OK);
 	}
 }
