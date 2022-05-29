@@ -1,16 +1,16 @@
 package com.trojan.blockchain.entity;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotEmpty;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document("Block")
 public class Block {
 
-	@Valid
-	@NotEmpty(message = "Block is empty!!")
+	@Id
+	private String id;
+	
 	private String block;
 	
-	@Valid
-	@NotEmpty(message = "Next Block is empty!!")
 	private String nextBlock;
 
 	public String getBlock() {
@@ -28,5 +28,13 @@ public class Block {
 	public void setNextBlock(String nextBlock) {
 		this.nextBlock = nextBlock;
 	}
+
+	public Block(String id, String block, String nextBlock) {
+		super();
+		this.id = id;
+		this.block = block;
+		this.nextBlock = nextBlock;
+	}
+	
 	
 }
