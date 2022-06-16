@@ -1,5 +1,7 @@
 package com.trojan.blockchain.entity;
 
+import java.time.LocalDateTime;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,33 +10,61 @@ public class Block {
 
 	@Id
 	private String id;
-	
-	private String block;
-	
-	private String nextBlock;
 
-	public String getBlock() {
+	private int block;
+
+	private int nextBlock;
+	
+	private LocalDateTime createdOn;
+
+	private LocalDateTime updatedOn;
+	
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public int getBlock() {
 		return block;
 	}
 
-	public void setBlock(String block) {
+	public void setBlock(int block) {
 		this.block = block;
 	}
 
-	public String getNextBlock() {
+	public int getNextBlock() {
 		return nextBlock;
 	}
 
-	public void setNextBlock(String nextBlock) {
+	public void setNextBlock(int nextBlock) {
 		this.nextBlock = nextBlock;
 	}
 
-	public Block(String id, String block, String nextBlock) {
+	public LocalDateTime getCreatedOn() {
+		return createdOn;
+	}
+
+	public void setCreatedOn(LocalDateTime createdOn) {
+		this.createdOn = createdOn;
+	}
+
+	public LocalDateTime getUpdatedOn() {
+		return updatedOn;
+	}
+
+	public void setUpdatedOn(LocalDateTime updatedOn) {
+		this.updatedOn = updatedOn;
+	}
+
+	public Block(String id, int block, int nextBlock) {
 		super();
 		this.id = id;
 		this.block = block;
 		this.nextBlock = nextBlock;
 	}
-	
-	
+
 }
