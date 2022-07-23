@@ -1,4 +1,4 @@
-package com.trojan.blockchain.entity;
+package com.trojan.blockchain.model;
 
 import java.time.LocalDateTime;
 

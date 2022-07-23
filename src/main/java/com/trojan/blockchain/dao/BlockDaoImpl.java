@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.trojan.blockchain.dto.BlockInfoDto;
-import com.trojan.blockchain.entity.Block;
+import com.trojan.blockchain.model.Block;
 import com.trojan.blockchain.repo.BlockChainRepo;
 import com.trojan.blockchain.util.Transformer;
 

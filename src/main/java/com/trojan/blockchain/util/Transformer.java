@@ -5,7 +5,7 @@ import java.time.ZoneId;
 import java.util.UUID;
 
 import com.trojan.blockchain.dto.BlockInfoDto;
-import com.trojan.blockchain.entity.Block;
+import com.trojan.blockchain.model.Block;
 
 public class Transformer {
 

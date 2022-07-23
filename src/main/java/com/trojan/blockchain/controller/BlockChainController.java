@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.trojan.blockchain.dto.BlockInfoDto;
-import com.trojan.blockchain.entity.Block;
+import com.trojan.blockchain.model.Block;
 import com.trojan.blockchain.service.BlockService;
 
 @RestController
